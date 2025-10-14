@@ -1,0 +1,64 @@
+
+ /* ------------------------------
+   UniBite | style.css
+   Inspired by Grub n Snack 🍊
+   Designed with love and warmth
+------------------------------ */
+
+/* Reset + Smooth Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #fff4eb, #ffd8b3);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------
+   Navbar
+------------------------------ */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #ff9333, #ff7b00);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 15px rgba(255, 128, 0, 0.3);
+  border-bottom: 2px solid #ffb46d;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ffeede;
+  transform: scale(1.1);
+}
+
