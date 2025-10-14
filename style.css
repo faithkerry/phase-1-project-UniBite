@@ -241,5 +241,21 @@ body {
 .liked-section h2 {
   color: #ff7b00;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
+  font-s
+  size: 1.6rem;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+  background: linear-gradient(90deg, #ff9333, #ff7b00);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 10px rgba(255, 128, 0, 0.3);
+  margin-top: auto;
 }
