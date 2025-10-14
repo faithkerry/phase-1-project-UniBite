@@ -62,3 +62,22 @@ body {
   transform: scale(1.1);
 }
 
+/* ------------------------------
+   Hero Section / Header
+------------------------------ */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #ff7b00;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
