@@ -1,0 +1,23 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node modules (in case i install packages later)
+node_modules/
+npm-debug.log
+
+# Local JSON server database
+db.json
+
+# Environment files
+.env
+
+# Backup or temp files
+*.log
+*.tmp
+
+# VS Code settings
+.vscode/
+
+# Live Server temporary files
+*.cache
