@@ -224,3 +224,22 @@ body {
 .cart-item button:hover {
   background: #ff571a;
 }
+
+/* ------------------------------
+   Liked Meals
+------------------------------ */
+.liked-section {
+  width: 90%;
+  margin: 2rem auto;
+  background: #fff4eb;
+  padding: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(255, 136, 0, 0.15);
+}
+
+.liked-section h2 {
+  color: #ff7b00;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
