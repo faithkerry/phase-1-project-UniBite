@@ -1,102 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UniBite | Affordable Campus Meals</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UniBite — Affordable Campus Meals</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-
-  <!-- Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body class="bg-light">
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">🍽️ UniBite</div>
+    <div class="logo">Affordable Campus Meals</div>
+    <ul>
+      <li><button class="nav-btn" data-cat="All">All</button></li>
+      <li><button class="nav-btn" data-cat="Appetizer">Appetizers</button></li>
+      <li><button class="nav-btn" data-cat="Main">Meals</button></li>
+      <li><button class="nav-btn" data-cat="Dessert">Desserts</button></li>
+    </ul>
 
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <span class="badge bg-primary text-white px-2 py-1">🍽️</span>
-        <div>
-          <span class="fw-bold">UniBite</span><br />
-          <small class="text-muted">Affordable campus meals</small>
-        </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item me-3">
-            <a class="nav-link" href="#" id="cartToggle">🛒 <span id="cartCount" class="badge bg-danger">0</span></a>
-          </li>
-        </ul>
-      </div>
+    <!-- 🛒 Cart Moved Here -->
+    <div class="cart-wrap-top">
+      <button id="cartToggle" class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
     </div>
   </nav>
 
-  <!-- ===== Search Bar ===== -->
-  <section class="py-4 bg-white shadow-sm">
-    <div class="container d-flex justify-content-center">
-      <div class="input-group w-75">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search for a meal..." />
-        <button id="searchBtn" class="btn btn-primary">Search</button>
-      </div>
-    </div>
+  <!-- HERO / tagline -->
+  <section class="hero">
+    <h1>Grab & Snack 🍊</h1>
+    <p class="tagline">Affordable Meals for Students & Techies!</p>
+    <p class="sub">Delicious, budget-friendly food for students.</p>
   </section>
 
-  <!-- ===== Meals Section ===== -->
-  <section class="container my-5">
-    <h3 class="fw-bold mb-4 text-center">Available Meals 🍛</h3>
-    <div id="mealList" class="row g-4">
-      <!-- Meals appear here dynamically -->
+  <!-- action row: search left -->
+  <div class="action-row container">
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Search meals (e.g. pilau, chapati, cake)..." />
+      <button id="searchBtn">Search</button>
+      <button id="clearSearch" class="muted">Clear</button>
     </div>
-  </section>
-
-  <!-- ===== Most Liked Section ===== -->
-  <section class="container my-5">
-    <h3 class="fw-bold mb-4 text-center text-primary">Most Liked Meals ❤️</h3>
-    <div id="likedMeals" class="row g-4">
-      <!-- Liked meals appear here dynamically -->
-    </div>
-  </section>
-
-  <!-- ===== Cart Sidebar ===== -->
-  <div id="cartSidebar" class="position-fixed top-0 end-0 bg-white shadow-lg h-100 p-4" style="width: 300px; display:none;">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h5>Your Cart 🛒</h5>
-      <button id="closeCart" class="btn btn-sm btn-outline-secondary">Close</button>
-    </div>
-    <ul id="cartItems" class="list-group mb-3"></ul>
-    <div class="d-flex justify-content-between">
-      <strong>Total:</strong>
-      <span id="cartTotal" class="fw-bold text-success">$0.00</span>
-    </div>
-    <button class="btn btn-success w-100 mt-3">Checkout</button>
   </div>
 
-  <!-- ===== Footer ===== -->
-  <footer class="text-center py-4 text-muted small">
-    © 2025 UniBite | Designed💻 for Moringa School Phase 1 Project. Eat, Code, Repeat!
+  <!-- MAIN CONTENT -->
+  <main class="container main-content">
+
+    <section class="category" id="appetizerSection">
+      <h2>🥗 Appetizers</h2>
+      <div id="appetizers" class="meal-grid"></div>
+    </section>
+
+    <section class="category" id="mainSection">
+      <h2>🍛 Main Meals</h2>
+      <div id="mainMeals" class="meal-grid"></div>
+    </section>
+
+    <section class="category" id="dessertSection">
+      <h2>🧁 Desserts</h2>
+      <div id="desserts" class="meal-grid"></div>
+    </section>
+
+    <section class="liked-section" id="likedSection">
+      <h2>❤️ Most Liked</h2>
+      <div id="likedMeals" class="meal-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- CART SIDEBAR -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-head">
+      <h4>Your Cart</h4>
+      <button id="closeCart" class="btn-close">✕</button>
+    </div>
+    <ul id="cartItems" class="cart-items list-unstyled"></ul>
+
+    <div class="cart-summary">
+      <div class="d-flex justify-content-between"><strong>Subtotal</strong><span id="cartSubtotal">KSh 0</span></div>
+      <div class="d-flex justify-content-between"><strong>Delivery</strong><span id="cartDelivery">KSh 0</span></div>
+      <hr />
+      <div class="d-flex justify-content-between fs-5"><strong>Total</strong><span id="cartTotal">KSh 0</span></div>
+      <button id="checkoutBtn" class="btn-checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- MEAL DETAIL MODAL -->
+  <div id="detailOverlay" class="detail-overlay" style="display:none;">
+    <div class="detail-card">
+      <button id="detailClose" class="btn-close">✕</button>
+      <img id="detailImage" src="" alt="meal" />
+      <h3 id="detailTitle"></h3>
+      <p id="detailPrice" class="text-success"></p>
+      <h5>Ingredients</h5>
+      <ul id="detailIngredients"></ul>
+      <h5>Procedure</h5>
+      <p id="detailProcedure" style="white-space:pre-wrap;"></p>
+      <div class="detail-actions">
+        <button id="detailAddCart" class="btn-primary-sm">Add to Cart</button>
+        <button id="detailBack" class="btn-outline-sm">⬅ Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 UniBite • Designed💻 for Moringa School Phase 1 Project. Eat, Code, Repeat! • <a href="#">Back to Top ↑</a>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
-  </script>
-
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
