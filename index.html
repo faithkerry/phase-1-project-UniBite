@@ -47,29 +47,59 @@
   <!-- MAIN CONTENT -->
   <main class="container main-content">
 
-    <section class="category" id="appetizerSection">
-      <h2>🥗 Appetizers</h2>
-      <div id="appetizers" class="meal-grid"></div>
-    </section>
+    <div class="menu-and-detail">
+      <!-- LEFT SIDE: Menu Sections -->
+      <div class="menu-side">
 
-    <section class="category" id="mainSection">
-      <h2>🍛 Main Meals</h2>
-      <div id="mainMeals" class="meal-grid"></div>
-    </section>
+        <section class="category" id="appetizerSection">
+          <h2>🥗 Appetizers</h2>
+          <div id="appetizers" class="meal-grid"></div>
+        </section>
 
-    <section class="category" id="dessertSection">
-      <h2>🧁 Desserts</h2>
-      <div id="desserts" class="meal-grid"></div>
-    </section>
+        <section class="category" id="mainSection">
+          <h2>🍛 Main Meals</h2>
+          <div id="mainMeals" class="meal-grid"></div>
+        </section>
 
-    <section class="liked-section" id="likedSection">
-      <h2>❤️ Most Liked</h2>
-      <div id="likedMeals" class="meal-grid"></div>
-    </section>
+        <section class="category" id="dessertSection">
+          <h2>🧁 Desserts</h2>
+          <div id="desserts" class="meal-grid"></div>
+        </section>
 
+        <section class="liked-section" id="likedSection">
+          <h2>❤️ Most Liked</h2>
+          <div id="likedMeals" class="meal-grid"></div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT SIDE: Detail Panel (slides in from right; initially hidden) -->
+      <aside id="detailPanel" class="detail-panel" aria-hidden="true">
+        <div class="detail-header">
+          <button id="detailBack" class="btn-back">⬅ Back to Menu</button>
+          <button id="detailClose" class="btn-close">✕</button>
+        </div>
+
+        <div class="detail-content">
+          <img id="detailImage" src="" alt="meal" />
+          <h3 id="detailTitle"></h3>
+          <p id="detailPrice" class="text-success fw-bold"></p>
+
+          <h5>Ingredients</h5>
+          <ul id="detailIngredients"></ul>
+
+          <h5>Procedure</h5>
+          <p id="detailProcedure" style="white-space:pre-wrap;"></p>
+
+          <div class="detail-actions">
+            <button id="detailAddCart" class="btn-primary-sm">Add to Cart</button>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
 
-  <!-- CART SIDEBAR -->
+  <!-- CART SIDEBAR (kept as you had it) -->
   <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
     <div class="cart-head">
       <h4>Your Cart</h4>
@@ -86,29 +116,12 @@
     </div>
   </aside>
 
-  <!-- MEAL DETAIL MODAL -->
-  <div id="detailOverlay" class="detail-overlay" style="display:none;">
-    <div class="detail-card">
-      <button id="detailClose" class="btn-close">✕</button>
-      <img id="detailImage" src="" alt="meal" />
-      <h3 id="detailTitle"></h3>
-      <p id="detailPrice" class="text-success"></p>
-      <h5>Ingredients</h5>
-      <ul id="detailIngredients"></ul>
-      <h5>Procedure</h5>
-      <p id="detailProcedure" style="white-space:pre-wrap;"></p>
-      <div class="detail-actions">
-        <button id="detailAddCart" class="btn-primary-sm">Add to Cart</button>
-        <button id="detailBack" class="btn-outline-sm">⬅ Back</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
+  <!-- FOOTER (kept exactly) -->
   <footer>
     © 2025 UniBite • Designed💻 for Moringa School Phase 1 Project. Eat, Code, Repeat! • <a href="#">Back to Top ↑</a>
   </footer>
 
+  <!-- script -->
   <script src="script.js"></script>
 </body>
 </html>
